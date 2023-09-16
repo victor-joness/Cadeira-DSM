@@ -1,6 +1,10 @@
 # Cadeira-DSM
 Repositório que vai conter todos os trabalhos e conteúdos da cadeira de desenvolvimento de software mobile. 
 
+# Emulação
+
+-> Para acompanhar a implementação do projeto eu usei o proprio celular com o aplicativo do expo, e também usei o blueStacks para emular e tirar prints.
+
 ## Modulo 01
 ### 📝 Questões :
 
@@ -8,7 +12,7 @@ Repositório que vai conter todos os trabalhos e conteúdos da cadeira de desenv
 sua aplicação em um arquivo Readme.md. Nesse mesmo arquivo Readme.md,
 inclua prints da sua aplicação.
 
-R: É um simples input com email e nome, que quando o usuario aperta no botão enviar ele aparece logo abaixo os dados digitos para o usuario conferir, Os arquivos então no MOD1-Q01.
+R: É um simples texto, que quando o usuario aperta o botão a cor do texto muda de vermelho pra verde ou vice versa. Os arquivos então no MOD1-Q01,02,03,04.
 
 - [ ] 2. Implemente uma aplicação em React Native que disponha de uma campo textual
 que mostra ao usuário quanto vezes ele clicou em um botão conforme mostra o
