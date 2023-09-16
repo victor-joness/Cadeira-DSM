@@ -9,6 +9,7 @@ Repositório que vai conter todos os trabalhos e conteúdos da cadeira de desenv
 ### 📝 Questões :
 
 -> Foto das questões 01,02,03,04 (Pode ver pela pasta diretamente no github)
+
 <img src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/1694868231014.jpg" data-canonical-src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/1694868231014.jpg" width="300" height="500" />
 
 - [x] 1. Implemente uma aplicação usando React, HTML e CSS. Descreva o propósito da
