@@ -70,7 +70,7 @@ Também foi feito um filtro para mostrar os livros que contém todas as propried
 Se um deles for nulo, então o livro é ignorado e passamos para o proximo, com isso renderizamos apenas os livros completos.
 
 ### Fotos da aplicação + gif :                                                                                       
-------------- Sem filtro -------------- ------------- Com filtro -------------- -------------- Gif ------------------
+-------------- Sem filtro ---------------- --------------- Com filtro --------------- ---------------- Gif -------------------
 
 <div>
 <img src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%202%20-%20sem%20filtro.jpeg" data-canonical-src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%202%20-%20sem%20filtro.jpeg" width="270" height="500" />
