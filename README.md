@@ -49,3 +49,34 @@ básicas de soma, subtração, multiplicação e divisão. Um template para a ca
 
 R: Feito, Os arquivos estão na pasta Questão 05
 
+## Modulo 02
+### 📝 Questão : 
+Implemente uma aplicação cujo propósito é o de requisitar uma lista de livros junto a
+um Web Service disposto na web, tratar os dados recebidos e exibi-los para o
+usuário. A User Interface (UI) da aplicação deve dispor de um campo de texto
+“chave de busca” e um botão “pesquisar”. Quando o usuário clicar em “pesquisar”,
+será disparada uma requisição GET com a URI https://hn.algolia.com/api/v1/search?query=X, tal
+que X é o valor de “chave de busca”. 
+
+### Resposta :  
+a aplicação permite que o usuário pesquise livros usando uma palavra-chave, faz uma requisição
+a um serviço da web para obter os resultados da pesquisa, trata os dados recebidos e exibe os livros
+encontrados na interface do usuário para que o usuário possa explorá-los. 
+
+O sistema de estrelas dos livros foi feito com base na propriedade "points", onde fazemos uma divisão por 1000
+e com isso temos um Rating do livro, por exemplo "points": 4271, vamos ter 4.2, ou seja, o livro vai ter 4 estrelas.
+
+Também foi feito um filtro para mostrar os livros que contém todas as propriedades basicas que são: author, title, url, points.               
+Se um deles for nulo, então o livro é ignorado e passamos para o proximo, com isso renderizamos apenas os livros completos.
+
+### Fotos da aplicação + gif :                                                                                       
+-------------- Sem filtro ---------------- --------------- Com filtro --------------- ------------------ Gif -------------------
+
+<div>
+<img src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%202%20-%20sem%20filtro.jpeg" data-canonical-src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%202%20-%20sem%20filtro.jpeg" width="270" height="500" />
+
+<img src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%202%20-%20filtro.jpeg" data-canonical-src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%202%20-%20filtro.jpeg" width="270" height="500" />
+
+<img src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%202%20-%20gif.gif" data-canonical-src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%202%20-%20gif.gif" width="270" height="500" />
+<div/>
+
