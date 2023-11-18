@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "83203350877",
+    "project_id": "banco-de-dados-dsm",
+    "storage_bucket": "banco-de-dados-dsm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83203350877:android:f7e21df1fbf26868d748b4",
+        "android_client_info": {
+          "package_name": "my.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_AXTuaghxEen5_irsnEQj0byXAbzsasQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
