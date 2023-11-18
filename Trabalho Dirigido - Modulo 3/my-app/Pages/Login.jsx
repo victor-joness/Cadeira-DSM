@@ -6,7 +6,7 @@ const Login = ({navigation}) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    if (email === 'admin' && password === 'admin') {
+    if (email === 'admin@gmail.com' && password === 'admin') {
       navigation.navigate('Home');
     } else {
       window.alert('Email ou senha inválidos');
