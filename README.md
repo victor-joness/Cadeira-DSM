@@ -91,22 +91,25 @@ descrição do tema do seu CRUD também deve vir no Readme.md do
 repositório contendo a aplicação.
 
 ### Credenciais :
-- Email: **admin@gmail.com**
-- Senha: **admin**
+- Email: **admin@gmail.com**                                                                                          
+- Senha: **admin**                                                                                                                        
 
 ### Resposta :  
-Escolhi o tema de crud de cadastro de livros.
+Escolhi o tema de crud de cadastro de livros, temos um app.js que é a onde vou fazer o gerenciamento de rotas com o **@react-navigation** e nele vai ter
+todas as rotas do sistema que são Login e Home.
+
 Primeiramente temos uma tela inicial que é a de login, onde temos 2 campos email e senha, onde vao ser validados,
 caso esteja errado é lançado um alert dizendo que o email ou a senha está errado, caso esteja correto o usuario é redirecionado 
 para a pagina de Home.jsx que é a onde a gente vai fazer o crud em questão.
+
 (**Create**) -> Na parte superior do Home, temos um botão que server para adicionar novos livros, esse botão ele abre um modal com 3 campos
 titulo, autor e descrição, e ai temos a ooção de salvar ou de voltar, caso escolha salvar, o livro em questão é salvo no banco de dados.
-caso escolha voltar, os campos são resetados e ele volta para a tela de home.
+caso escolha voltar, os campos são resetados e ele volta para a tela de home.                                                                                                          
 (**Read**) -> Logo abaixo do botão de adicionar temos a listagem dos livros do sistema, então eu faço um leitura(get) no banco de dados e passo
 esses dados que vem do banco de dados e delego o gerenciamento para o meu Redux da aplicação que eu chamei de **bookReducer** a partir dele que vamos
 efetivamente buscar os dados e mostrar na tela, já que e ele quem faz o gerenciamento, apois isso podemos ver na tela os livros 
-utilizando **Layout flex** para organizar os livros e não quebrar a responsividade.
-(**Update**) -> 
+utilizando **Layout flex** para organizar os livros e não quebrar a responsividade.                                                                                                              
+(**Update**) ->                                                                                                                         
 (**Delete**) -> 
 
 ### Requisitos : 
