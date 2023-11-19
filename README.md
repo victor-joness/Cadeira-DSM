@@ -109,8 +109,12 @@ caso escolha voltar, os campos são resetados e ele volta para a tela de home.
 esses dados que vem do banco de dados e delego o gerenciamento para o meu Redux da aplicação que eu chamei de **bookReducer** a partir dele que vamos
 efetivamente buscar os dados e mostrar na tela, já que e ele quem faz o gerenciamento, apois isso podemos ver na tela os livros 
 utilizando **Layout flex** para organizar os livros e não quebrar a responsividade.                                                                                                              
-(**Update**) ->                                                                                                                         
-(**Delete**) -> 
+(**Update**) -> Cada livro que está sendo listado, vai ter 2 botoes no final do card, um deles sendo o de update onde se for clicado é aberto um modal 
+com os dados antigos e sendo possivel fazer a alteração e o salvamento dos dados atualizados no banco de dados, nesse caso eu não consegui usar o firebase
+como banco de dados, poís ficava dando erro de "databaseURL", então eu usei o **mongoDB** como banco de dados para esse projeto pois eu vi que não tem muita
+diferença para o firebase e vai servir 100% para a atividade proposta.                                                        
+(**Delete**) -> Assim como no update, vamos ter um botão de deletar que vai fazer o delete do livro no banco de dados, e tudo isso é gerenciado pelo redux, então
+é atualizado dinamicamente no aplicativo.
 
 ### Requisitos : 
 - [x]  Integração com FireBase;
