@@ -1,15 +1,27 @@
 import React, { useState } from 'react';
 import { Modal, View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
-const ModalLivro = ({ visible, onClose }) => {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const [description, setDescription] = useState('');
+const   ModalLivro = ({ visible, onClose, onAdd }) => {
+  const [titulo, setTitulo] = useState('');
+  const [autor, setAutor] = useState('');
+  const [img, setImg] = useState('');
+  const [descricao, setDescricao] = useState('');
 
   const handleAdd = () => {
-    setTitle('');
-    setAuthor('');
-    setDescription('');
+    const novoLivro = {
+      id: Math.random(9999),
+      titulo,
+      autor,
+      img,
+      descricao
+    };
+    onAdd(novoLivro);
+  //post de livros, não sei pq não ta funcionando as requisições no aplicativo, porem na web http://localhost:3001/livros funciona perfeitamente
+  /*const livros = await axios.post("http://10.0.2.2:3001/livros"); */
+    setTitulo('');
+    setAutor('');
+    setImg('');
+    setDescricao('');
     onClose();
   };
 
@@ -21,20 +33,26 @@ const ModalLivro = ({ visible, onClose }) => {
           <TextInput
             style={styles.input}
             placeholder="Título"
-            value={title}
-            onChangeText={(text) => setTitle(text)}
+            value={titulo}
+            onChangeText={(text) => setTitulo(text)}
           />
           <TextInput
             style={styles.input}
             placeholder="Autor"
-            value={author}
-            onChangeText={(text) => setAuthor(text)}
+            value={autor}
+            onChangeText={(text) => setAutor(text)}
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="Img"
+            value={img}
+            onChangeText={(text) => setImg(text)}
           />
           <TextInput
             style={styles.input}
             placeholder="Descrição"
-            value={description}
-            onChangeText={(text) => setDescription(text)}
+            value={descricao}
+            onChangeText={(text) => setDescricao(text)}
             multiline
           />
           <TouchableOpacity style={styles.addButton} onPress={handleAdd}>
