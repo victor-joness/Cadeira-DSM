@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity} from "react-native";
 import { connect } from "react-redux";
 import { setBooks } from "../Redux/actions";
-import BookItem from "../components/BookItem";
-import ModalBook from "../components/ModalBook";
+import LivroItem from "../components/LivroItem";
+import ModalLivro from "../components/ModalLivro";
 
 const Home = ({ books, setBooks }) => {
   useEffect(() => {
@@ -11,43 +11,49 @@ const Home = ({ books, setBooks }) => {
       const data = [
         {
           id: "1",
-          title: "Livro 1",
-          author: "Autor 1",
-          description:
+          titulo: "Livro 1",
+          autor: "Autor 1",
+          img: "https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg",
+          descricao:
             "Lorem Ipsum is simply dummy has been the industry's standard dummy text ever since the 1500s",
         },
         {
           id: "2",
-          title: "Livro 2",
-          author: "Autor 2",
-          description:
+          titulo: "Livro 2",
+          autor: "Autor 2",
+          img: "https://editoraelefante.com.br/wp-content/uploads/2020/03/54-ContraAmazon_externas-4.png",
+          descricao:
             "Lorem Ipsum is simply dummy has been the industry's standard dummy text ever since the 1500s",
         },
         {
           id: "3",
-          title: "Livro 3",
-          author: "Autor 3",
-          description:
+          titulo: "Livro 3",
+          autor: "Autor 3",
+          img:"https://m.media-amazon.com/images/I/41Zdll5QWBL.jpg",
+          descricao:
             "Lorem Ipsum is simply dummy has been the industry's standard dummy text ever since the 1500s",
         },{
             id: "4",
-            title: "Livro 1",
-            author: "Autor 1",
-            description:
+            titulo: "Livro 4",
+            autor: "Autor 4",
+            img: "https://m.media-amazon.com/images/I/51sew-A-dFL.jpg",
+            descricao:
               "Lorem Ipsum is simply dummy has been the industry's standard dummy text ever since the 1500s",
           },
           {
             id: "5",
-            title: "Livro 2",
-            author: "Autor 2",
-            description:
+            titulo: "Livro 5",
+            autor: "Autor 5",
+            img: "https://m.media-amazon.com/images/I/51DCDy0meIL._AC_UF1000,1000_QL80_.jpg",
+            descricao:
               "Lorem Ipsum is simply dummy has been the industry's standard dummy text ever since the 1500s",
           },
           {
             id: "6",
-            title: "Livro 3",
-            author: "Autor 3",
-            description:
+            titulo: "Livro 6",
+            autor: "Autor 6",
+            img: "https://images-na.ssl-images-amazon.com/images/I/51kAYMwbQIL._AC_SX368_.jpg",
+            descricao:
               "Lorem Ipsum is simply dummy has been the industry's standard dummy text ever since the 1500s",
           },
       ];
@@ -58,7 +64,7 @@ const Home = ({ books, setBooks }) => {
     fetchData();
   }, [setBooks]);
 
-  const [isAddModalVisible, setAddModalVisible] = useState(false);
+  const [isAddModalVisivel, setAddModalVisivel] = useState(false);
 
   const handleAddBook = () => {
     console.log("Adicionar");
@@ -66,24 +72,25 @@ const Home = ({ books, setBooks }) => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <TouchableOpacity style={styles.addButton} onPress={() => setAddModalVisible(true)}>
+      <TouchableOpacity style={styles.addButton} onPress={() => setAddModalVisivel(true)}>
         <Text style={styles.buttonText}>Adicionar Novos Livros</Text>
       </TouchableOpacity>
 
-      <ModalBook
-        visible={isAddModalVisible}
-        onClose={() => setAddModalVisible(false)}
+      <ModalLivro
+        visible={isAddModalVisivel}
+        onClose={() => setAddModalVisivel(false)}
         onAdd={handleAddBook}
       />
 
-      <Text style={styles.title}>Lista de Livros</Text>
+      <Text style={styles.titulo}>Lista de Livros</Text>
       <View style={styles.booksContainer}>
         {books.map((item) => (
-          <BookItem
+          <LivroItem
             key={item.id}
-            title={item.title}
-            author={item.author}
-            description={item.description}
+            titulo={item.titulo}
+            autor={item.autor}
+            img={item.img}
+            descricao={item.descricao}
           />
         ))}
       </View>
@@ -101,7 +108,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 60,
   },
-  title: {
+  titulo: {
     fontSize: 24,
     marginBottom: 16,
     marginTop: 16,
