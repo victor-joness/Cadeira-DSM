@@ -4,6 +4,7 @@ import ModalLivroEdit from "./ModalLivroEdit";
 import ConfirmarDelete from "./ConfirmarDelete";
 
 const LivroItem = ({
+  id,
   titulo,
   autor,
   img,
@@ -14,11 +15,21 @@ const LivroItem = ({
   const [isEditModalVisivel, setEditModalVisivel] = useState(false);
   const [isDeleteDialogVisivel, setDeleteDialogVisivel] = useState(false);
 
-  const handleEditPress = () => {
+  const livro = {
+    autor: autor,
+    descricao : descricao,
+    id: id != null ? id : Math.random(999999),
+    img: img,
+    titulo: titulo
+  }
+
+  const handleEditPress = (livro) => {
+    onEditPress(livro);
     setEditModalVisivel(true);
   };
 
   const handleDeletePress = () => {
+    onDeletePress(livro);
     setDeleteDialogVisivel(true);
   };
 
@@ -35,7 +46,7 @@ const LivroItem = ({
           </TouchableOpacity>
 
           {isEditModalVisivel && (
-            <ModalLivroEdit onClose={() => setEditModalVisivel(false)} />
+            <ModalLivroEdit onClose={() => setEditModalVisivel(false)} livro={livro} onUpdate={handleEditPress} />
           )}
 
           <TouchableOpacity
@@ -48,7 +59,8 @@ const LivroItem = ({
           {isDeleteDialogVisivel && (
             <ConfirmarDelete
               onClose={() => setDeleteDialogVisivel(false)}
-              onDelete={onDeletePress}
+              onDelete={handleDeletePress}
+              livro={livro}
             />
           )}
         </View>
@@ -61,7 +73,7 @@ const styles = StyleSheet.create({
   bookItem: {
     padding: 10,
     width: 150,
-    height: 370,
+    height: "auto",
     borderRadius: 10,
     backgroundColor: "#ddd",
   },
