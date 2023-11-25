@@ -1,13 +1,19 @@
 import React from 'react';
 import { View, Text, Modal, TouchableOpacity, StyleSheet } from 'react-native';
 
-const ConfirmarDelete = ({ onClose, onDelete }) => (
+const ConfirmarDelete = ({ onClose, livro, onDelete }) => {
+  const handleDelete = () => {
+    onDelete(livro);
+    onClose();
+  };
+
+  return(
   <Modal transparent visible={true} animationType="slide">
     <View style={styles.modalContainer}>
       <View style={styles.modalContent}>
         <Text style={styles.modalText}>Tem certeza de que deseja excluir?</Text>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={[styles.modalButton, styles.deleteButton]} onPress={onDelete}>
+          <TouchableOpacity style={[styles.modalButton, styles.deleteButton]} onPress={handleDelete}>
             <Text style={styles.buttonText}>Sim</Text>
           </TouchableOpacity>
           <TouchableOpacity style={[styles.modalButton, styles.cancelButton]} onPress={onClose}>
@@ -17,7 +23,7 @@ const ConfirmarDelete = ({ onClose, onDelete }) => (
       </View>
     </View>
   </Modal>
-);
+)};
 
 const styles = StyleSheet.create({
   modalContainer: {
