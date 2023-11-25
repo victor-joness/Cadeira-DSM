@@ -130,5 +130,5 @@ correlata ao Flux;
 
 <img src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20adicionar.jpeg" data-canonical-src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20adicionar.jpeg" width="270" height="500" />
 
-<img src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20Gif.gif" data-canonical-src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20Gif.gif" width="270" height="500" />
+<img src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20Video.gif" data-canonical-src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20Video.gif" width="270" height="500" />
 <div/>
