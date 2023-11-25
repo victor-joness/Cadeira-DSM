@@ -117,11 +117,18 @@ diferença para o firebase e vai servir 100% para a atividade proposta.
 é atualizado dinamicamente no aplicativo.
 
 ### Requisitos : 
-- [x]  Integração com FireBase;
+- [x]  Integração com MongoDB;
 - [x]  Navegação entre telas;
 - [x]  Redux ou qualquer outra abordagem de gerenciamento global da aplicação
 correlata ao Flux;
 - [x]  Noções de layout Flex ou Grid.
 
 ### Fotos da aplicação + gif :                                                                                       
--------------- Sem filtro ---------------- --------------- Com filtro --------------- ------------------ Gif -------------------
+-------------- Login ---------------- --------------- Adicionar Livro --------------- ------------------ Gif -------------------
+<div>
+<img src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20Login.jpeg" data-canonical-src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20Login.jpeg" width="270" height="500" />
+
+<img src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20adicionar.jpeg" data-canonical-src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20adicionar.jpeg" width="270" height="500" />
+
+<img src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20Gif.gif" data-canonical-src="https://github.com/victor-joness/Cadeira-DSM/blob/main/Images/Modulo%203%20-%20Gif.gif" width="270" height="500" />
+<div/>
