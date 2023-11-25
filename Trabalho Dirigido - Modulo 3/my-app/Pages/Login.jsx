@@ -32,6 +32,8 @@ const Login = ({navigation}) => {
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
+
+      <Text style={styles.footer}>Feito Por Victor Mesquita</Text>
     </View>
   );
 };
@@ -64,6 +66,18 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
+  footer: {
+    color: "white",
+    backgroundColor: "red",
+    width: 200,
+    height: 40,
+    borderRadius: 10,
+    textAlign: "center",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: 10,
+    marginTop: 20
+  }
 });
 
 export default Login;
