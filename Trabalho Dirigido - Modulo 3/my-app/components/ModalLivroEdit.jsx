@@ -1,7 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Text, Modal, TouchableOpacity, StyleSheet, TextInput } from 'react-native';
 
-const ModalLivroEdit = ({ onClose }) => (
+const ModalLivroEdit = ({ onClose,livro, onUpdate }) => {
+  const [id, setId] = useState(livro.id);
+  const [titulo, setTitulo] = useState(livro.titulo);
+  const [autor, setAutor] = useState(livro.autor);
+  const [img, setImg] = useState(livro.img);
+  const [descricao, setDescricao] = useState(livro.descricao);
+  
+  const handleUpdate = () => {
+    const dadosAtualizados = {
+      id: id,
+      titulo: titulo,
+      autor: autor,
+      img: img,
+      descricao: descricao
+    };
+    onUpdate(dadosAtualizados);
+    onClose();
+  };
+  
+  return(
   <Modal transparent visible={true} animationType="slide">
     <View style={styles.modalContainer}>
       <View style={styles.modalContent}>
@@ -9,18 +28,30 @@ const ModalLivroEdit = ({ onClose }) => (
         <TextInput
           style={styles.input}
           placeholder="Novo Título"
+          value={titulo}
+          onChangeText={(text) => setTitulo(text)}
         />
         <TextInput
           style={styles.input}
           placeholder="Novo Autor"
+          value={autor}
+          onChangeText={(text) => setAutor(text)}
+        />
+         <TextInput
+          style={styles.input}
+          placeholder="Novo Img"
+          value={img}
+          onChangeText={(text) => setImg(text)}
         />
         <TextInput
           style={styles.input}
           placeholder="Nova Descrição"
+          value={descricao}
+          onChangeText={(text) => setDescricao(text)}
           multiline
           numberOfLines={4}
         />
-        <TouchableOpacity style={styles.modalButton} onPress={onClose}>
+        <TouchableOpacity style={styles.modalButton} onPress={handleUpdate}>
           <Text style={styles.buttonText}>Confirmar</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.modalFechar} onPress={onClose}>
@@ -29,7 +60,7 @@ const ModalLivroEdit = ({ onClose }) => (
       </View>
     </View>
   </Modal>
-);
+)};
 
 const styles = StyleSheet.create({
   modalContainer: {
